@@ -1,4 +1,5 @@
 import 'package:alarm_app/features/presentation/views/alarm_ringing_view.dart';
+import 'package:alarm_app/features/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,9 +11,13 @@ class AlarmApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      routes: {
+        HomeView.id: (context) => const HomeView(),
+        AlarmRingingView.id: (context) => const AlarmRingingView()
+      },
+      initialRoute: HomeView.id,
       debugShowCheckedModeBanner: false,
-      home: AlarmRingingView(),
     );
   }
 }
