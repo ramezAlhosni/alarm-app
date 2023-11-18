@@ -1,4 +1,5 @@
 import 'package:alarm_app/core/constant.dart';
+import 'package:alarm_app/core/util/images.dart';
 import 'package:alarm_app/core/util/styles.dart';
 import 'package:alarm_app/features/presentation/views/widgets/custom_Button.dart';
 import 'package:flutter/material.dart';
@@ -17,13 +18,7 @@ class AlarmRingingViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      decoration: const BoxDecoration(
-        image: DecorationImage(
-            image: AssetImage(
-              'assets/image/unsplash_tZCrFpSNiIQ .png',
-            ),
-            fit: BoxFit.fill),
-      ),
+      decoration: boxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -50,13 +45,23 @@ class AlarmRingingViewBody extends StatelessWidget {
           const CustomButton(
               width: double.infinity,
               text: 'Dismision',
-              backgroundColor: kDimisionButtonColor,
+              backgroundColor: kPriColor,
               textColor: Colors.black),
           const SizedBox(
             height: 32,
           )
         ],
       ),
+    );
+  }
+
+  BoxDecoration boxDecoration() {
+    return BoxDecoration(
+      image: DecorationImage(
+          image: AssetImage(
+            Images.backgroundImage,
+          ),
+          fit: BoxFit.fill),
     );
   }
 }

@@ -17,4 +17,14 @@ abstract class Fonts {
     fontWeight: FontWeight.w700,
     fontFamily: kPriFonts,
   );
+  static const textStyle15W6 = TextStyle(
+      fontSize: 15,
+      fontWeight: FontWeight.w600,
+      fontFamily: kPriFonts,
+      color: Colors.black);
+  static const textStyle15W5 = TextStyle(
+      fontSize: 15,
+      fontWeight: FontWeight.w500,
+      fontFamily: kPriFonts,
+      color: Color(0xff656565));
 }

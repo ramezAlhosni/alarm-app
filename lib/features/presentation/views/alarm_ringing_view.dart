@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 class AlarmRingingView extends StatelessWidget {
   const AlarmRingingView({super.key});
+  static const id = 'AlarmRingingView';
 
   @override
   Widget build(BuildContext context) {
